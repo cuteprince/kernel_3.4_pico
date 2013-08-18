@@ -2999,5 +2999,5 @@ MACHINE_START(PICO, "pico")
 	.init_machine	= pico_init,
 	.timer		= &msm_timer,
 	.init_early     = msm7x2x_init_early,
-	//.handle_irq	= gic_handle_irq,
+	.handle_irq	= vic_handle_irq,
 MACHINE_END
