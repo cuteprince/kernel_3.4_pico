@@ -2263,7 +2263,7 @@ void __init msm_common_io_init(void)
 		pr_err("%s: socinfo_init() failed!\n", __func__);
 	msm7x27x_cache_init();
 }
-
+#if !defined(CONFIG_MACH_PICO)
 void __init msm8625_init_irq(void)
 {
 	msm_gic_irq_extn_init();
@@ -2279,7 +2279,7 @@ void __init msm8625_map_io(void)
 		pr_err("%s: socinfo_init() failed!\n", __func__);
 	msm7x27x_cache_init();
 }
-
+#endif
 static int msm7627a_init_gpio(void)
 {
 	if (cpu_is_msm8625() || cpu_is_msm8625q())
